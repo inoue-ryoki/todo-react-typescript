@@ -7,10 +7,14 @@ function App() {
     setText(e.target.value);
   }
   return (
-    <div className="App">
-      <input value={text} onChange={onChangeInput} />
-      <p>{text}</p>
-
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <input
+        className="mb-4 p-2 border border-gray-300 rounded"
+        value={text}
+        onChange={onChangeInput}
+        placeholder="Type something..."
+      />
+      <p className="text-lg text-gray-700">{text}</p>
     </div>
   );
 }
