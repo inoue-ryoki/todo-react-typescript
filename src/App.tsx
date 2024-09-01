@@ -6,6 +6,10 @@ function App() {
   const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
   }
+
+  const onButtonClick = () => {
+    alert("click");
+  }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <input
@@ -14,6 +18,7 @@ function App() {
         onChange={onChangeInput}
         placeholder="Type something..."
       />
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={onButtonClick}>ボタン</button>
       <p className="text-lg text-gray-700">{text}</p>
     </div>
   );
